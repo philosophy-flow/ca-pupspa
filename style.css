@@ -5,7 +5,9 @@ body {
 }
 
 .grid {
-
+  display: grid;
+  grid-template: 5% 50% 12% 20% 20% 5% / repeat(6, 1fr);
+  grid-column-gap: 20px;
 }
 
 header {
@@ -13,6 +15,7 @@ header {
   color: #dc6363;
   padding-top: 10px;
 
+  grid-column: 1 / span 6;
 }
 
 .banner {
@@ -24,6 +27,7 @@ header {
   letter-spacing: 3.7px;
   color: #ffffff;
 
+  grid-column: 1 / span 6;
 }
 
 img {
@@ -34,6 +38,7 @@ img {
   background-color: #f0f0f0;
   padding-bottom: 20px;
 
+  grid-column: 1 / span 6;
 }
 
 .text {
@@ -63,15 +68,15 @@ img {
 }
 
 .address {
-
+  grid-column: 1 / span 2;
 }
 
 .hours {
-
+  grid-column: 3 / span 2;
 }
 
 .call-us {
-
+  grid-column: 5 / span 2;
 }
 
 .marker {
@@ -102,11 +107,11 @@ img {
 }
 
 .one {
-
+  grid-column: 1 / span 3;
 }
 
 .two {
-
+  grid-column: 4 / span 3;
 }
 
 footer {
@@ -117,17 +122,21 @@ footer {
   font-weight: 300;
   letter-spacing: 0.4px;
 
+  grid-column: 1 / span 6;
 }
 
 
 @media(max-width: 600px){
 
   .grid {
-
+    grid-template-columns: 100%;
+    /* grid-template-rows: 5% 20% 10% repeat(5, 1fr) 5%; 9 tot*/ 
+    grid-template-rows: 5% 20% repeat(4, 2fr) repeat(2, 1fr) 5%;
+    grid-row-gap: 20px;
   }
 
   header {
-
+    grid-column: 1 / span 1;
   }
 
   .banner {
@@ -135,7 +144,8 @@ footer {
     font-weight: 300;
     line-height: 2.75;
     letter-spacing: 1.9px;
-
+    width: 100%;
+    grid-column: 1 / span 1;
   }
 
   .dog {
@@ -145,7 +155,7 @@ footer {
   }
 
   .about {
-
+    grid-column: 1 / span 1;
   }
 
   .text {
@@ -163,15 +173,18 @@ footer {
   }
 
   .address {
-
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
   }
 
   .hours {
-
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 1;
   }
 
   .call-us {
-
+    grid-row: 6 / span 1;
+    grid-column: 1 / span 1;
   }
 
   .marker {
@@ -196,15 +209,16 @@ footer {
   }
 
   .one {
-
+    grid-row: 7 / span 1;
+    grid-column: 1 / span 1;
   }
 
   .two {
-
+    grid-row: 8 / span 1;
+    grid-column: 1 / span 1;
   }
 
   footer {
-
+    grid-column: 1 / span 1;
   }
-
 }
